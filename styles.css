@@ -1,0 +1,277 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+.settings {
+    margin-bottom: 20px;
+}
+
+.settings label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.settings input {
+    width: 50px;
+    text-align: center;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#start-game {
+    padding: 10px 20px;
+    background-color: #ff2600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#start-game:hover {
+    background-color: #0056b3;
+}
+
+#game-frame {
+    display: inline-block;
+    padding: 10px;
+    background-color: #007bff;
+    border-radius: 10px;
+    margin-top: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#game-board {
+    display: grid;
+    gap: 5px;
+    justify-content: center;
+    background-color: #e7fcff;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #007bff;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #d0e4ff;
+}
+
+#game-message {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.winning-line {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.7);
+    z-index: 1;
+    animation: draw-line 1s forwards;
+}
+
+@keyframes draw-line {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .settings input {
+        width: 45px;
+        padding: 4px;
+    }
+
+    #start-game {
+        padding: 8px 16px;
+    }
+
+    .cell {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    #game-message {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .settings input {
+        width: 40px;
+        padding: 3px;
+    }
+
+    #start-game {
+        padding: 7px 14px;
+    }
+
+    .cell {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    #game-message {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .settings label, .settings input {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .settings input {
+        width: 100%;
+        text-align: center;
+    }
+
+    #start-game {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .cell {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    #game-message {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    .settings input {
+        width: 100%;
+        padding: 2px;
+    }
+
+    #start-game {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .cell {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    #game-message {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 14px;
+    }
+
+    .settings input {
+        width: 100%;
+        padding: 1px;
+    }
+
+    #start-game {
+        width: 100%;
+        padding: 6px;
+    }
+
+    .cell {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+    }
+
+    #game-message {
+        font-size: 10px;
+    }
+}
